@@ -1,0 +1,65 @@
+<header
+  class="w-full bg-green-600 py-10 flex flex-col md:flex-row md:justify-around items-center text-white"
+>
+  <div class="">
+    <a href="/">
+      <h2 class="text-3xl font-bold">Cuacnopalan</h2>
+    </a>
+  </div>
+
+  <nav
+    class="md:flex hidden justify-between items-center gap-5 text-xl"
+  >
+    <a
+      class="p-2 hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href="transporte"
+      >Transporte</a
+    >
+    <a
+      class="p-2 hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href=""
+      >Escuelas</a
+    >
+    <a
+      class="p-2 hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href=""
+      >Otros</a
+    >
+  </nav>
+
+  <p
+    class="mt-5 text-xl hover:cursor-pointer md:hidden"
+    id="mobile-menu"
+  >
+    <i class="ph-bold ph-list text-3xl"></i>
+  </p>
+
+  <nav
+    class="nav-links hidden md:hidden flex-col items-center mt-5 gap-5 text-xl"
+  >
+    <a
+      class="p-2 block text-center hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href="transporte"
+      >Transporte</a
+    >
+    <a
+      class="p-2 block text-center hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href=""
+      >Escuelas</a
+    >
+    <a
+      class="p-2 block text-center hover:bg-white hover:text-green-600 hover:rounded-md transition-all"
+      href=""
+      >Otros</a
+    >
+  </nav>
+</header>
+
+<script>
+  const menuBoton = document.querySelector('#mobile-menu');
+
+  menuBoton.addEventListener('click', () => {
+    const menu = document.querySelector('.nav-links');
+    menu.classList.toggle('hidden');
+  });
+</script>

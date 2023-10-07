@@ -1,0 +1,49 @@
+<section class="container-md mx-auto text-center p-10">
+  <div
+    class="flex flex-col-reverse gap-5 md:flex-row md:items-center md:justify-around mt-10"
+  >
+    <div class="mt-5 flex flex-col gap-8 px-16 w-10/12 mx-auto">
+      <h2 class="text-4xl text-green-700 font-bold">Ubicación</h2>
+      <p class="mt-5 text-lg">
+        La comunidad de Cuacnopalan o San Sebastián Cuacnopalan, se encuentra
+        dentro del Municipio de Palmar de Bravo, Pue. Cuacnopalan se localiza
+        entre el Golfo y el Altiplano de México, lo que le permite un fácil
+        acceso a la capital del país y a la capital del Estado de Puebla.
+      </p>
+      <a
+        href=""
+        class="boton"
+        >Ver más</a
+      >
+    </div>
+
+    <div
+      id="mapa"
+      class="w-full"
+    >
+    </div>
+  </div>
+</section>
+
+<style>
+  #mapa {
+    height: 20rem;
+  }
+  .boton {
+    @apply bg-green-700 hover:bg-green-900 transition text-white font-bold text-base px-10 py-2 rounded-md my-5 block sm:w-auto sm:inline-block;
+  }
+</style>
+
+<script>
+  const lon = 18.817144;
+  const lat = -97.511895;
+
+  const map = L.map('mapa').setView([lon, lat], 14);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  L.marker([lon, lat]).addTo(map).bindPopup('Cuacnopalan').openPopup();
+</script>

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Transporte from '../components/principal/Transporte.astro';
+import Historia from '../components/principal/Historia.astro';
+import Ubicacion from '../components/principal/Ubicacion.astro';
+import Fiesta from '../components/principal/Fiesta.astro';
+---
+
+<Layout titulo="Inicio">
+  <h1 class="mt-10 md:mb-10 text-6xl font-bold text-center text-amber-900">
+    Cuacnopalan <span class="block text-4xl mt-4">Palmar de Bravo, Puebla.</span
+    >
+  </h1>
+  <Historia />
+  <Fiesta/>
+  <Ubicacion />
+  <Transporte />
+</Layout>

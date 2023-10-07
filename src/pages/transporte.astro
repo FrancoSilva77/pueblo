@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TransporteInterCard from '../components/transporte/TransporteInterCard.astro';
+import TransporteLocalCard from '../components/transporte/TransporteLocalCard.astro';
+---
+
+<Layout titulo="Transporte">
+  <div class="container mx-auto mt-5 px-5">
+    <h1 class="text-center text-4xl font-bold text-green-700 my-10">
+      Transporte Cuacnopalan
+    </h1>
+
+    <h2 class="text-center text-3xl py-5 text-amber-800 font-semibold mt-5">
+      Transporte Interurbano
+    </h2>
+
+    <div class="my-5 sm:grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Inicio Card -->
+      <TransporteInterCard
+        destino="Tecamachalco"
+        ocpion="L2"
+        costo="22"
+        tiempo="1 Hora"
+        corrida="Cada 10 minutos"
+        estacion="Centro"
+      />
+      <TransporteInterCard
+        destino="Ciudad Serdan"
+        ocpion="L2"
+        costo="22"
+        tiempo="1 Hora"
+        corrida="Cada hora"
+        estacion="Centro"
+      />
+      <TransporteInterCard
+        destino="Cañada"
+        ocpion="L2"
+        costo="10"
+        tiempo="20 minutos"
+        corrida="Cada 20 minutos"
+        estacion="Centro"
+      />
+      <TransporteInterCard
+        destino="Tlacotepec"
+        ocpion="L2"
+        costo="10"
+        tiempo="20 minutos"
+        corrida="Cada 20 minutos"
+        estacion="Centro"
+      />
+      <TransporteInterCard
+        destino="Tehuacan"
+        ocpion="AU"
+        costo="38"
+        tiempo="1 Hora con 20 minutos"
+        corrida="Variado"
+        estacion="Centro"
+      />
+      <TransporteInterCard
+        destino="Puebla"
+        ocpion="AU"
+        costo="10"
+        tiempo="20 minutos"
+        corrida="Variado"
+        estacion="Centro"
+      />
+    </div>
+    <!-- Fin InterUrbano -->
+
+    <div class="my-10">
+      <h2 class="text-center text-3xl py-5 text-amber-800 font-semibold my-5">
+        Transporte Local
+      </h2>
+      <div class="my-5 sm:grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <TransporteLocalCard
+          tipo="Mototaxis"
+          tarifa="10"
+          horario="Desde 7:00 a.m."
+        />
+        <TransporteLocalCard
+          tipo="Taxis"
+          tarifa="50"
+          horario="Desde 6:00 a.m."
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
